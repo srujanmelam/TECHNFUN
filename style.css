@@ -89,6 +89,24 @@ footer {
 .t th {
     font-family: 'Oswald', sans-serif;
 }
+.im {
+  border-radius:50%;
+  width:15%;
+  height:15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+h2{
+  font-family: 'RocknRoll One', sans-serif;
+  color:white;
+  text-decoration: underline;
+  text-align:center;
+}
+.text {
+  color:white;
+}
 
 .fa {
   padding: 20px;
@@ -111,6 +129,8 @@ footer {
 }
 p {
     text-align: center;
+    font-family: 'Arvo', serif;
+font-family: 'RocknRoll One', sans-serif;
 }
 .fa-linkedin {
   background: #007bb5;
