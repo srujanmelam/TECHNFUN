@@ -25,3 +25,12 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+var j = 0;
+function change(){
+    var i=document.getElementById("step");
+    var col = ["silver","white","#3e8e41"];
+    i.style.color=col[j];
+    i.style.transition="3s";
+    j=(j+1)%col.length;
+}
+setInterval(change,3000);

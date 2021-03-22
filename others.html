@@ -30,7 +30,7 @@
         <a class="r" href="#about">About</a>
     </div>
     <br><br><br><br>
-    <h1>"SOME SORT OF RANDOM STUFF HERE" </h1>
+    <h1 id="step">"SOME SORT OF RANDOM STUFF HERE" </h1>
     <br><br><br><br><br>
     <table width="100%">
         <tr>
@@ -54,7 +54,7 @@
             </td>
         </tr>
         
-    </table>
+    </table><br>
 
     <footer><br><br>
 
@@ -89,7 +89,17 @@
         <p>&copy; Copyright 2020, TECH N FUN.</p>
 
     </footer>
-    <script src="basic.js" async defer></script>
+    <script src="basic.js" async defer></script><script>
+        var j = 0;
+            function change() {
+                var i = document.getElementById("step");
+                var col = ["silver", "#3e8e41","white"];
+                i.style.color = col[j];
+                i.style.transition = "3s";
+                j = (j + 1) % col.length;
+            }
+            setInterval(change, 3000);
+    </script>
 </body>
 
 </html>
