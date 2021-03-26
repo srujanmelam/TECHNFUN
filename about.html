@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" />
@@ -34,12 +38,12 @@
     
     <div class="topnav">
         <a class="active" href="index.html">T<span id="one">e</span>ch <span id="two">N </span>Fun</a>
-        <a class="r" href="#news">News</a>
+        <a class="r" href="#news">Latest</a>
         <a class="r" href="#contact">Contact</a>
         <a class="r" href="about.html">About</a>
     </div>
     <br><br>
-    <h1>DON'T LET YOUR ICE CREAM MELT WHILE YOU'RE COUNTING SOMEBODY ELSE'S SPRINKLES.</h1>
+    <h1 id="step">DON'T LET YOUR ICE CREAM MELT WHILE YOU'RE COUNTING SOMEBODY ELSE'S SPRINKLES.</h1>
     <br><br>
    <img class="im" src="images/10.jpeg" alt="Avatar">
     <br><br><h2>ABOUT</h2>
@@ -80,40 +84,45 @@
 </p><br><br>
 
     <br><br><br>
-            <footer><br><br>
-
-                <table style="width:100%" class="t">
-                    <tr>
-                        <th>SOCIAL MEDIA</th>
-                        <th>ABOUT US</th>
-                        <th>QUERIES</th>
-                        <th>SUGGESTIONS</th>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.linkedin.com/in/srujan-melam-2118061b0" class="fa fa-linkedin"></a>
-                        </td>
-                        <td><a href="" class="two">info</a></td>
-                        <td><a href="" class="two">Website</a></td>
-                        <td><a href="" class="two">Development</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.youtube.com/channel/UCC3yytzXD44hhzmpJcFCM8Q"
-                                class="fa fa-youtube"></a>
-                        </td>
-                        <td><a href="" class="two">E-mail</a></td>
-                        <td><a href="" class="two">Data</a></td>
-                        <td><a href="" class="two">Improvement</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.instagram.com/srujan__chinnu/" class="fa fa-instagram"></a></td>
-                        <td><a href="" class="two">Intrests</a></td>
-                        <td><a href="" class="two">Topics</a></td>
-                        <td><a href="" class="two">Content</a></td>
-                    </tr>
-                </table><br>
+        <footer>
+            <div class="container-fluid" style="text-align: center;">
+        
+                <table class="table table-borderless">
+                    <thead>
+                        <tr style="color:white;text-align: center;">
+                            <th>SOCIAL-MEDIA</th>
+                            <th>QUERIES</th>
+                            <th>ABOUT</th>
+                            <th>LATEST</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="color:white;text-align: center;">
+                            <td><a href="https://www.linkedin.com/in/srujan-melam-2118061b0" class="fa fa-linkedin"></a>
+                            </td>
+                            <td>Complaint</td>
+                            <td>About Us</td>
+                            <td>Gaming</td>
+                        </tr>
+                        <tr style="color:white;text-align: center;">
+                            <td><a href="https://www.youtube.com/channel/UCC3yytzXD44hhzmpJcFCM8Q" class="fa fa-youtube"></a>
+                            </td>
+                            <td>Suggest Us</td>
+                            <td>About Website</td>
+                            <td>Odyssey</td>
+                        </tr>
+                        <tr style="color:white;text-align: center;">
+                            <td><a href="https://www.instagram.com/srujan__chinnu/" class="fa fa-instagram"
+                                    style="text-align: center;"></a></td>
+                            <td>Comment</td>
+                            <td>About Channel</td>
+                            <td>Tech</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <p>&copy; Copyright 2020, TECH N FUN.</p>
-
-            </footer>
+            </div>
+        </footer>
             <script src="basic.js" async defer></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
                 integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
@@ -121,6 +130,17 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
                 integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
                 crossorigin="anonymous"></script>
+                <script>
+                    var j = 0;
+                        function change() {
+                            var i = document.getElementById("step");
+                            var col = ["silver", "#3e8e41", "white"];
+                            i.style.color = col[j];
+                            i.style.transition = "3s";
+                            j = (j + 1) % col.length;
+                        }
+                        setInterval(change, 3000);
+                </script>
 </body>
 
 </html>

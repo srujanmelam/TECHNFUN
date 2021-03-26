@@ -7,6 +7,9 @@ function others() {
 function tech() {
   window.open("tech.html");
 }
+function Odyssey() {
+  window.open("Odyssey.html");
+}
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
