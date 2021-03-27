@@ -37,3 +37,13 @@ function change(){
     j=(j+1)%col.length;
 }
 setInterval(change,3000);
+
+j=0;
+function changer() {
+                    i = document.getElementById("tim");
+                    var col = ["50%","90%","100%","130%","200%"];
+                    i.style.fontSize = col[j];
+                    i.style.transition = "2s";
+                    j = (j + 1) % col.length;
+            }
+            setInterval(changer,2000);
